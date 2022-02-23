@@ -1,0 +1,7 @@
+Opeartion Name    URL                      Description
+
+createBus        POST /api/v1/bus         Create new bus
+getAllBus        GET /api/v1/bus          List all bus
+getBus           GET /api/v1/bus/{ID}     List the bus of ID sepcified in the path parameter
+deleteBus        DELETE /api/v1/bus/{ID}  Delete bus with ID sepcified in the path parameter
+updateBus        PUT /api/v1/bus/{ID}     Update bus details
