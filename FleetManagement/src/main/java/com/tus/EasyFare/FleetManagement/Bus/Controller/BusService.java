@@ -42,19 +42,19 @@ public class BusService {
 	public Bus deleteBus(long id)
 	{
 		System.out.println("test");
-		Optional<Bus> optionalPet = busRepository.findById(id);
-		System.out.println(optionalPet);
-		Bus existingPet = optionalPet.get();
+		Optional<Bus> optionalBus = busRepository.findById(id);
+		System.out.println(optionalBus);
+		Bus existingBus = optionalBus.get();
 		busRepository.deleteById(id);
-		return existingPet;
+		return existingBus;
 	}
 	
 	public Bus updateBus(long id, Bus bus)
 	{
 		
-		Optional<Bus> optionalPet = busRepository.findById(id);
+		Optional<Bus> optionalBus = busRepository.findById(id);
 		
-		Bus existingBus = optionalPet.get();
+		Bus existingBus = optionalBus.get();
 		System.out.println("test");
 		System.out.println(existingBus);
 		existingBus.setBusNumber(bus.getBusNumber());

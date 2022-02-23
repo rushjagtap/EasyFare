@@ -56,9 +56,9 @@ public class BusController {
 	}
 	
 	@RequestMapping(value ="/bus/{id}", method = RequestMethod.PUT)
-	public ResponseEntity<Bus> updateBus(@PathVariable int id, @RequestBody Bus pet)
+	public ResponseEntity<Bus> updateBus(@PathVariable int id, @RequestBody Bus bus)
 	{
-		Bus updatedBus = busService.updateBus(id, pet);
+		Bus updatedBus = busService.updateBus(id, bus);
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/bus").buildAndExpand(updatedBus.getBusId()).toUri();
 		return new ResponseEntity<Bus>(updatedBus,HttpStatus.OK);
 	}
@@ -67,9 +67,9 @@ public class BusController {
 	public ResponseEntity<Bus> updateBus(@PathVariable int id)
 	{
 		System.out.println("start");
-		Bus deletedPet = busService.deleteBus(id);
+		Bus deletedBus = busService.deleteBus(id);
 		System.out.println("out");
-		return new ResponseEntity<Bus>(deletedPet,HttpStatus.OK);
+		return new ResponseEntity<Bus>(deletedBus,HttpStatus.OK);
 	}
 
 }
