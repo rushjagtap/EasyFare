@@ -38,19 +38,14 @@ public class BusController {
 	}
 	
 	@RequestMapping(value = "/bus/{id}", method = RequestMethod.GET)
-	public Optional<Bus> getPet(@PathVariable int id)
+	public Optional<Bus> getBus(@PathVariable int id)
 	{
 		return busService.getBus(id);
 	}
 	
 	
 	
-//	@RequestMapping(value = "/pet" ,method = RequestMethod.GET)
-//	public List<Pet> getPetByName(@RequestParam String name)
-//	{
-//		return petService.getPet(name);
-//	}
-//	
+	
 	@RequestMapping(value ="/bus", method = RequestMethod.POST)
 	public ResponseEntity<Bus> createBus(@RequestBody Bus bus)
 	{
